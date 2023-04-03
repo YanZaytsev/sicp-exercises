@@ -5,3 +5,4 @@
         (else (and (eq? (car list-a) (car list-b)) (equal? (cdr list-a) (cdr list-b))))
 ))
 
+(equal? (list 'a) (list 'a))
