@@ -1,0 +1,17 @@
+(define (attach-tag datum tag)
+    (if (number? datum) datum (cons tag datum))
+)
+
+(define (type-tag datum)
+    (cond ((number? datum) 'scheme-number)
+            ((pair? datum) (car datum))
+            (else (error "Wrong type"))
+    )
+)
+
+(define (contents datum)
+    (cond ((number? datum) datum)
+            ((pair? datum) (cdr datum))
+            (else (error "Wrong type"))
+    )
+)
